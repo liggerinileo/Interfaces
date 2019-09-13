@@ -1,0 +1,44 @@
+
+body{
+    background-color: rgb(49, 70, 117);
+    
+}
+
+.titulo{
+    font-family: 'Kaushan Script', cursive;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(172, 172, 0);
+    font-size: 20px;
+}
+
+#canvas{
+    background-color: rgb(0, 7, 35);
+    border-radius: 8px;
+    margin-left: 12%;
+}
+
+.boton{
+    margin-left: 38%; 
+}
+
+#btn-unir{
+    background-color: rgb(0, 16, 82);
+    border: none;
+    text-align: center;
+    border-radius: 8px;
+    font-family: 'Kaushan Script', cursive;
+    margin-right: 10%;
+    padding: 15px 20px;
+}
+
+#btn-unir, .boton, .nombre{
+    color: rgb(172, 172, 0);
+    font-family: 'Kaushan Script', cursive;
+    font-size: 20px; 
+}
+
+/************************************************************
+**************************************************************/
+
+
