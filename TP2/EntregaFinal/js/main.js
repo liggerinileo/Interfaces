@@ -165,7 +165,7 @@ window.onkeypress  = e => {
     
 window.onkeyup = e => {
     if (e.code === "KeyC") {
-        //actualizar();
+        actualizar();
         letraC = false;
     }
 }
