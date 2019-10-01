@@ -1,0 +1,186 @@
+.spaceKey{
+  color: red;
+}
+
+.lives{
+  width: 7%;
+  font-size: 20px;
+  margin-left: 46%;
+  text-align: center;
+}
+
+.lives, .instructions{
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+.instructions p{
+  text-align: center;
+}
+
+/*************Background**********/
+#beach, #sky-background{
+  margin-left: 10%;
+}
+
+#beach{
+  width: 80%;
+  height: 80%;
+  left: 0%;
+  top: 0%;
+  position: absolute;
+  background-image: url(../img/beach3.png);
+  background-size: cover;
+  background-position: center;
+ 
+}
+
+.beach-animation{
+  animation: 5s beach-movement linear infinite;
+}
+
+@keyframes beach-movement {
+  0% {background-position: 0;}
+  100% {background-position: -2100px;}
+}
+
+#sky-background {
+  height: 80%;
+  width: 80%; 
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  background-image: url(../img/sky.png);
+  z-index: -1;
+}
+
+.sky-background-animation{
+  animation: 300s sky-movement infinite;
+}
+
+@keyframes sky-movement {
+  100% {
+    background-position-x: -9999px;
+  }
+}
+
+.hide{
+  display: none;
+}
+
+h1, h3{
+  position: relative;
+  font-family: 'Saira Stencil One', cursive;
+}
+
+#startAgain{
+  width: 29%;
+  margin-left: 35%;
+  font-size: 25px;
+  text-align: center;
+}
+
+#gameOver{
+  text-align: center;
+  width: 37%;
+  margin-top: 10%;
+  height: 120px;
+  margin-left: 31%;
+  font-size: 40px;
+}
+
+/******************Player******************/
+#runner {
+  margin-left: 15%;
+  width: 150px; 
+  height: 180px;
+  background-size: 1000px 180px;
+  background-image: url(../img/img1.webp);
+  position: absolute;
+  top: 55%;
+}
+
+.boy-run{
+  animation: run 0.8s steps(6,start) infinite;
+}
+
+@keyframes run {
+  0% {background-position: 0 0}
+  100% {background-position: -1000px 0}
+}
+
+.saltar {
+  animation: salto 1.5s;      
+}
+
+@keyframes salto {
+  0% {top: 55%;}
+  50% {top: 10%}
+  100% {top: 55%}
+}
+
+.immunity {
+  animation: .2s immune linear infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes immune {
+  0% {
+    opacity: 1.0;
+  }
+
+  50% {
+    opacity: 0.0;
+  }
+
+  100% {
+    opacity: 1.0;
+  }
+}
+
+
+/****************Bird**************/
+
+#seagull{
+  z-index: 20;
+  width: 133px;
+  height: 128px;
+  top: 65%;
+  left: 80%;
+  position: absolute;
+  background-image: url(../img/seagull.png);
+}
+
+.seagull-fly{
+  animation: seagull-move-left 2.5s steps(6) infinite;
+}
+
+@keyframes seagull-move-left {
+  0% {background-position: 0;
+    left: 80%;} 
+  10% {background-position: 805px;
+    left: 72%;}
+  20% {background-position: 0;
+    left: 64%;}
+  30% {background-position: 805px;
+    left: 57%;}
+  40% {background-position: 0;
+    left: 50%;} 
+  50% {background-position: 805px;
+    left: 43%;} 
+  60% {background-position: 0;
+    left: 36%;}
+  70% {background-position: 805px;
+    left: 29;}
+  80% {background-position: 0;
+    left: 21%;}
+  90% {background-position: 805px;
+    left: 14%;} 
+  100% {background-position: 0;
+    left: 7%;} 
+}
+
+.lose{
+opacity: 0;
+}
+
