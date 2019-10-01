@@ -1,6 +1,6 @@
 "use strict";
 
-location.reload();
+window.onload = location.reload();
 
 addEventListener("DOMContentLoaded", () => {
 
