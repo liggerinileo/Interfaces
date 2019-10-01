@@ -167,8 +167,16 @@ window.onkeypress  = e => {
 
     
 window.onkeyup = e => {
+<<<<<<< HEAD
      
         actualizar();
         letraC = false;
     
 }
+=======
+    if (e.code === "KeyC") {
+        actualizar();
+        letraC = false;
+    }
+}
+>>>>>>> e3236fd5ed92c9f9473ba60a398839b0efd95034
