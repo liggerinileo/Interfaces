@@ -1,0 +1,80 @@
+.informacion{
+    width: 50%;
+    height: 500px;
+    border: 5px rgb(185, 185, 185);
+    border-style: double;
+    margin-left: 25%;
+    text-align: center;
+}
+
+.informacion h1{
+    font-size: 50px;
+    color: rgb(0, 75, 87);
+}
+
+.informacion h1, .informacion h2, .informacion h3{
+    font-family: 'Pacifico', cursive;
+}
+
+.informacion h2{
+    font-size: 35px;
+    color: rgb(59, 130, 142);
+}
+
+.informacion h3{
+    font-size: 25px;
+    color: rgb(82, 165, 178);
+}
+
+.autor{
+    margin-top: 30%;
+
+}
+
+.nav{
+    float: left;
+    font-family: 'Fredoka One', cursive;
+    left: 0%;
+    width: 9%;
+}
+
+.container{
+    width: 100%;
+    height: 600px;
+    margin-left: 80%;   
+    float: right;
+    margin-top: 0%; 
+}
+
+a{
+    text-decoration: none;
+}
+
+.link-html a{
+    color: darkgray;
+}
+
+.link-home a{
+    color: gray;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.link-html, .link-home{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 40%;
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+    border-top: 1px solid lightgrey; 
+}
+
+.link-html:hover{
+    background-color: rgb(225, 224, 224);
+}
+
+.link-home:hover{
+    background-color: rgb(196, 196, 196);
+}
+
+

@@ -33,11 +33,11 @@ export class Polygon{
             for (let i = 0; i < this.vertices.length-1; i++) {
                 this.vertices[i].draw(ctx);
                 this.vertices[i+1].draw(ctx);
-                let line = new Line(this.vertices[i].x, this.vertices[i].y, this.vertices[i+1].x, this.vertices[i+1].y, colorLinea);
+                let line = new Line(this.vertices[i], this.vertices[i+1], colorLinea);
                 line.draw(ctx);
             }
             if (this.centro != null) {
-                let line = new Line(this.vertices[0].x, this.vertices[0].y, this.vertices[this.vertices.length-1].x, this.vertices[this.vertices.length-1].y, colorLinea);
+                let line = new Line(this.vertices[0], this.vertices[this.vertices.length-1], colorLinea);
                 line.draw(ctx);
                 this.centro.draw(ctx, 0, 255, 0, 7);
             }
@@ -72,5 +72,6 @@ export class Polygon{
     borrarVertice(vertice){
         let verticeBorrar = this.vertices.indexOf(vertice);
         this.vertices.splice(verticeBorrar, 1);
+        this.center = this.calcularCentro();
     }
 }

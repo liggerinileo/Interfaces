@@ -1,0 +1,14 @@
+.runner {
+    width: 240px; 
+    height: 290px;
+    background-image: url(../../img/img1.webp);
+    animation: run 4s steps(23,start) infinite;
+    margin-left: 35%;  
+  }
+  @keyframes run {
+    0% {background-position: 0 0}
+    100% {background-position: -5900px 0}
+  }
+  
+
+  

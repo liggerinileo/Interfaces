@@ -24,10 +24,7 @@ let verticeBlue = 0;
 let centroRed = 0;
 let centroGreen = 255;
 let centroBlue = 0;
-//rgb linea
-let lineaRed = 255;
-let lineaGreen = 255;
-let lineaBlue = 0;
+
 
 
 
@@ -60,10 +57,11 @@ addEventListener("DOMContentLoaded", () => {
             for (let j = 0; j < poligonos[i].vertices.length; j++) {
                 if (poligonos[i].vertices[j].detectClick(e.layerX, e.layerY)) {
                     verticeActual = poligonos[i].vertices[j];
-    
+                    break;
                 }
             }
         }
+        
     }
 
     canvas.onmousemove = e => {
@@ -89,8 +87,16 @@ addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < poligonos.length; i++) {
             for (let j = 0; j < poligonos[i].vertices.length; j++) {
                 if (poligonos[i].vertices[j].detectClick(e.layerX, e.layerY)) {
-                    poligonos[i].borrarVertice(poligonos[i].vertices[j]);
-                    actualizar();
+                    
+                        poligonos[i].borrarVertice(poligonos[i].vertices[j]);
+                        actualizar();
+                        break;
+                        /*if (poligonos[i].vertices[j] === 1) {    
+                            this.poligonos.splice(i, 1);
+                    
+                            console.log(poligonos.length);
+                        }*/
+                    
                 }
             }
         }actualizar();
@@ -109,12 +115,12 @@ btnUnir.addEventListener("click", () => {
     poligono.cerrarPoligono(ctx);
     poligonos.push(poligono);
     primerVertice = false;
-              
+        
             
 });
 
 function actualizar() {
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "rgb(49, 70, 117)";
     ctx.clearRect(0, 0, canvas.clientWidth, canvas.height);
     for (let i = 0; i < poligonos.length; i++) {
         poligonos[i].draw(ctx);
@@ -131,8 +137,6 @@ window.onkeypress  = e => {
                 if (e.deltaY > 0) {
                     verticeRed = 255;
                     centroGreen = 255;
-                    lineaRed = 255;
-                    lineaGreen = 255
                     for (let i = 0; i < poligonos.length; i++) {
                         poligonos[i].draw(ctx, "khaki");
                         for (let j = 0; j < poligonos[i].vertices.length; j++) {
@@ -147,7 +151,6 @@ window.onkeypress  = e => {
                     verticeBlue = 0;
                     centroRed = 0;
                     centroBlue = 0;
-                    lineaBlue = 0;
                     for (let i = 0; i < poligonos.length; i++) {
                         poligonos[i].draw(ctx, "olive");
                         for (let j = 0; j < poligonos[i].vertices.length; j++) {
@@ -164,8 +167,8 @@ window.onkeypress  = e => {
 
     
 window.onkeyup = e => {
-    if (e.code === "KeyC") {
+     
         actualizar();
         letraC = false;
-    }
+    
 }

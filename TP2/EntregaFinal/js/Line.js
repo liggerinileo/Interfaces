@@ -1,10 +1,8 @@
 export class Line{
 
-    constructor(x1, y1, x2, y2, color){
-        this.x1 = x1;
-        this.y1 = y1;
-        this.x2 = x2;
-        this.y2 = y2;
+    constructor(vertice1, vertice2, color){
+        this.vertice1 = vertice1;
+        this.vertice2 = vertice2;
         this.color = color;
     }
 
@@ -13,8 +11,8 @@ export class Line{
         ctx.lineWidth = '3';
         ctx.strokeStyle = this.color;
         ctx.beginPath();
-        ctx.moveTo(this.x1, this.y1);
-        ctx.lineTo(this.x2, this.y2);
+        ctx.moveTo(this.vertice1.x, this.vertice1.y);
+        ctx.lineTo(this.vertice2.x, this.vertice2.y);
         ctx.stroke();
         ctx.closePath();
     }
