@@ -1,6 +1,7 @@
 "use strict";
 
-  
+location.reload();
+
 addEventListener("DOMContentLoaded", () => {
 
 let gameOver = false;
@@ -24,7 +25,6 @@ let birdY;
 
 let lives = parseInt(amountOfLives.innerHTML);
 
-  location.reload();
 
   document.onkeypress = (e) => {
     e = e || window.event;
