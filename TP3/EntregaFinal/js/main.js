@@ -57,7 +57,6 @@ let lives = parseInt(amountOfLives.innerHTML);
     
     if(!gameOver){
       update();
-      console.log("Entra a gameloop");
       
       if (gameOverr(runnerX, runnerY, runnerWidth, runnerHeight, birdX, birdY, birdWidth, birdHeight)) {
         if (lives === 1) {
@@ -141,7 +140,7 @@ let lives = parseInt(amountOfLives.innerHTML);
       beach.classList.remove('beach-animation');
       runner.classList.remove('boy-run');
       bird.classList.remove('seagull-fly');
-      console.log("colision");
+     
       return true;
     }else{
       return false;
